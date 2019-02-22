@@ -1,0 +1,18 @@
+<h2>Books</h2>
+<app-book-form (createBook)="addBook($event)"></app-book-form>
+
+<table *ngIf="books">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of books; trackBy: trackBook">
+      <td>{{ book.title }}</td>
+      <td>{{ book.author }}</td>
+    </tr>
+  </tbody>
+</table>
+<div id="no-books" *ngIf="!books">Sorry! There is no book yet!</div>
