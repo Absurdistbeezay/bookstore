@@ -15,7 +15,6 @@ export class BookFormComponent implements OnInit {
   add() {
     this.createBook.emit(this.book);
     this.book = new Book("", "", "", -1);
-
     // console.log(this.book);
   }
 

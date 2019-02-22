@@ -4,11 +4,12 @@ import { AppComponent } from "./app.component";
 import { BookListComponent } from "./books/book-list/book-list.component";
 import { BookFormComponent } from "./books/book-form/book-form.component";
 import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 describe("AppComponent", () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, FormsModule],
+      imports: [RouterTestingModule, FormsModule, HttpClientModule],
       declarations: [AppComponent, BookListComponent, BookFormComponent]
     }).compileComponents();
   }));
