@@ -10,7 +10,10 @@
   </thead>
   <tbody>
     <tr *ngFor="let book of books; trackBy: trackBook">
-      <td>{{ book.title }}</td>
+      <td>
+        <a [routerLink]="['/reviews', book.bookId]">{{ book.title }}</a>
+      </td>
+      <!-- <td>{{ book.title }}</td> -->
       <td>{{ book.author }}</td>
     </tr>
   </tbody>

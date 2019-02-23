@@ -10,8 +10,8 @@ export class BookService {
   constructor(private http: HttpClient) {}
 
   private url: string = "http://localhost:8080/BookService/jaxrs/books";
-  getBooks() {
-    return this.http.get(this.url);
+  getBooks():Observable<Book[]> {
+    return this.http.get<Book[]>(this.url);
   }
   addBook(book: Book): Observable<Book> {
     const headers = new HttpHeaders({
